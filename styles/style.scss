@@ -25,6 +25,20 @@ nav {
   .card {
     @include cardStyle();
   }
+  .cardFb {
+    border-top: 4px solid $Facebook;
+  }
+  .cardTw {
+    border-top: 4px solid $Twitter;
+  }
+  .cardInsta {
+    // border-top: 4px solid $Facebook;
+    border-top: 4px solid transparent;
+    border-image: $Instagram 1 round;
+  }
+  .cardYt {
+    border-top: 4px solid $Facebook;
+  }
 }
 
 // today overview cards

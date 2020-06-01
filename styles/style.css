@@ -43,6 +43,25 @@ nav {
   border-radius: 6px;
 }
 
+.mainCards .cardFb {
+  border-top: 4px solid #198ff5;
+}
+
+.mainCards .cardTw {
+  border-top: 4px solid #1ca0f2;
+}
+
+.mainCards .cardInsta {
+  border-top: 4px solid transparent;
+  -o-border-image: linear-gradient(to right, #fdc468, #df4996) 1 round;
+     border-image: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996)) 1 round;
+     border-image: linear-gradient(to right, #fdc468, #df4996) 1 round;
+}
+
+.mainCards .cardYt {
+  border-top: 4px solid #198ff5;
+}
+
 .todayCards {
   display: -ms-grid;
   display: grid;
