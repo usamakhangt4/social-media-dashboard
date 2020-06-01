@@ -1,0 +1,13 @@
+@mixin cardsGrid($textAlign) {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  justify-content: center;
+  align-items: center;
+  text-align: $textAlign;
+  grid-gap: 30px;
+}
+
+@mixin cardStyle {
+  background-color: $DarkDesaturatedBlueCardBG;
+  border-radius: 6px;
+}

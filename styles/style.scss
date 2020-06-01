@@ -1,0 +1,36 @@
+@import "./variables";
+@import "./mixins";
+* {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: $WhiteText;
+}
+body {
+  background-color: $VeryDarkBlueTopBG;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// main cards
+.mainCards {
+  @include cardsGrid(center);
+
+  //   individua; card
+  .card {
+    @include cardStyle();
+  }
+}
+
+// today overview cards
+.todayCards {
+  @include cardsGrid(justify);
+  .card {
+    @include cardStyle();
+  }
+}
