@@ -1,14 +1,16 @@
 @import "./variables";
 @import "./mixins";
+
 * {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  color: $WhiteText;
 }
+
 body {
   background-color: $VeryDarkBlueTopBG;
   padding-left: 10%;
   padding-right: 10%;
+  color: $WhiteText;
 }
 
 nav {
@@ -25,25 +27,62 @@ nav {
   .card {
     @include cardStyle();
   }
+
   .cardFb {
     border-top: 4px solid $Facebook;
+
+    .flex-center {
+      @include flex-center();
+
+      ion-icon {
+        color: $Facebook;
+      }
+    }
   }
+
   .cardTw {
     border-top: 4px solid $Twitter;
+
+    .flex-center {
+      @include flex-center();
+
+      ion-icon {
+        color: $Facebook;
+      }
+    }
   }
+
   .cardInsta {
     // border-top: 4px solid $Facebook;
     border-top: 4px solid transparent;
     border-image: $Instagram 1 round;
+
+    .flex-center {
+      @include flex-center();
+
+      ion-icon {
+        background-image: $Instagram;
+      }
+    }
   }
+
   .cardYt {
-    border-top: 4px solid $Facebook;
+    border-top: 4px solid $YouTube;
+
+    .flex-center {
+      @include flex-center();
+
+      ion-icon {
+        color: $YouTube;
+      }
+    }
   }
 }
 
 // today overview cards
 .todayCards {
   @include cardsGrid(justify);
+
   .card {
     @include cardStyle();
   }

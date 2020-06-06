@@ -2,13 +2,13 @@
 * {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  color: white;
 }
 
 body {
   background-color: #1f212e;
   padding-left: 10%;
   padding-right: 10%;
+  color: white;
 }
 
 nav {
@@ -47,8 +47,50 @@ nav {
   border-top: 4px solid #198ff5;
 }
 
+.mainCards .cardFb .flex-center {
+  height: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 10px;
+  color: #8b97c6;
+  font-size: 14px;
+}
+
+.mainCards .cardFb .flex-center ion-icon {
+  color: #198ff5;
+}
+
 .mainCards .cardTw {
   border-top: 4px solid #1ca0f2;
+}
+
+.mainCards .cardTw .flex-center {
+  height: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 10px;
+  color: #8b97c6;
+  font-size: 14px;
+}
+
+.mainCards .cardTw .flex-center ion-icon {
+  color: #198ff5;
 }
 
 .mainCards .cardInsta {
@@ -58,8 +100,51 @@ nav {
      border-image: linear-gradient(to right, #fdc468, #df4996) 1 round;
 }
 
+.mainCards .cardInsta .flex-center {
+  height: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 10px;
+  color: #8b97c6;
+  font-size: 14px;
+}
+
+.mainCards .cardInsta .flex-center ion-icon {
+  background-image: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
+  background-image: linear-gradient(to right, #fdc468, #df4996);
+}
+
 .mainCards .cardYt {
-  border-top: 4px solid #198ff5;
+  border-top: 4px solid #c4032a;
+}
+
+.mainCards .cardYt .flex-center {
+  height: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 10px;
+  color: #8b97c6;
+  font-size: 14px;
+}
+
+.mainCards .cardYt .flex-center ion-icon {
+  color: #c4032a;
 }
 
 .todayCards {
