@@ -64,7 +64,7 @@ nav {
   font-size: 14px;
 }
 
-.mainCards .cardFb .flex-center ion-icon {
+.mainCards .cardFb .flex-center i {
   color: #198ff5;
 }
 
@@ -89,7 +89,7 @@ nav {
   font-size: 14px;
 }
 
-.mainCards .cardTw .flex-center ion-icon {
+.mainCards .cardTw .flex-center i {
   color: #198ff5;
 }
 
@@ -117,7 +117,7 @@ nav {
   font-size: 14px;
 }
 
-.mainCards .cardInsta .flex-center ion-icon {
+.mainCards .cardInsta .flex-center i {
   background-image: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
   background-image: linear-gradient(to right, #fdc468, #df4996);
 }
@@ -143,7 +143,7 @@ nav {
   font-size: 14px;
 }
 
-.mainCards .cardYt .flex-center ion-icon {
+.mainCards .cardYt .flex-center i {
   color: #c4032a;
 }
 

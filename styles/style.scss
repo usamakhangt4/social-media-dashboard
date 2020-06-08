@@ -34,7 +34,7 @@ nav {
     .flex-center {
       @include flex-center();
 
-      ion-icon {
+      i {
         color: $Facebook;
       }
     }
@@ -46,7 +46,7 @@ nav {
     .flex-center {
       @include flex-center();
 
-      ion-icon {
+      i {
         color: $Facebook;
       }
     }
@@ -60,7 +60,7 @@ nav {
     .flex-center {
       @include flex-center();
 
-      ion-icon {
+      i {
         background-image: $Instagram;
       }
     }
@@ -72,7 +72,7 @@ nav {
     .flex-center {
       @include flex-center();
 
-      ion-icon {
+      i {
         color: $YouTube;
       }
     }
