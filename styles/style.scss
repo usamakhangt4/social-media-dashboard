@@ -1,9 +1,17 @@
 @import "./variables";
 @import "./mixins";
 
+
+
 * {
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  // display: none;
+  color: red;
 }
 
 body {
@@ -29,7 +37,7 @@ nav {
   }
 
   .pWide span:first-child {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 700;
   }
 
@@ -104,17 +112,95 @@ nav {
   }
 }
 
+@media(max-width:1100px) {
+  .mainCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:650px) {
+  .mainCards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 // today overview cards
 .todayCards {
   @include cardsGrid(justify);
+
+  .card {
+    height: 130px;
+    padding: auto;
+  }
 
   .card {
     @include cardStyle();
 
     .flex {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
+      margin: 0%;
+      margin-left: 10%;
+      margin-right: 10%;
+
+      i {
+        font-size: 1.3em;
+      }
+
+      p {
+        font-weight: bold;
+        font-size: 14px;
+        color: $DesaturatedBlueText;
+      }
+
+      .fa-instagram {
+        background: $Instagram;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .fa-facebook-square {
+        color: $Facebook;
+      }
+
+      .fa-twitter {
+        color: $Twitter;
+      }
+
+      .fa-youtube {
+        color: $YouTube;
+      }
     }
+
+    .flex2 {
+      align-items: baseline;
+
+      p:first-child {
+        font-size: 2em;
+        color: $WhiteText;
+      }
+
+      .decreasedFollowers {
+        @include followers($BrightRed);
+      }
+
+      .increasedFollowers {
+        @include followers($LimeGreen);
+
+      }
+    }
+  }
+}
+
+@media(max-width:1100px) {
+  .todayCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:550px) {
+  .todayCards {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
