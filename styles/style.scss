@@ -28,6 +28,27 @@ nav {
     @include cardStyle();
   }
 
+  .pWide span:first-child {
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  .pWide span:last-child {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $DesaturatedBlueText;
+  }
+
+  .decreasedFollowers {
+    @include followers($BrightRed);
+  }
+
+  .increasedFollowers {
+    @include followers($LimeGreen);
+
+  }
+
   .cardFb {
     border-top: 4px solid $Facebook;
 
@@ -57,11 +78,14 @@ nav {
     border-top: 4px solid transparent;
     border-image: $Instagram 1 round;
 
+
     .flex-center {
       @include flex-center();
 
       i {
-        background-image: $Instagram;
+        background: $Instagram;
+        background-clip: text;
+        color: transparent;
       }
     }
   }
@@ -74,6 +98,7 @@ nav {
 
       i {
         color: $YouTube;
+
       }
     }
   }
@@ -85,5 +110,11 @@ nav {
 
   .card {
     @include cardStyle();
+
+    .flex {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
   }
 }

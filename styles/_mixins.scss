@@ -22,3 +22,13 @@
   color: $DesaturatedBlueText;
   font-size: 14px;
 }
+
+@mixin followers($color) {
+  color: $color;
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 5px;
+}
