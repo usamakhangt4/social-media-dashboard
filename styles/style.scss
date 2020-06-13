@@ -14,8 +14,25 @@
   color: red;
 }
 
-body {
+.lightMode {
+  background-color: $WhiteBG;
+
+  * {
+    color: $DarkGrayishBlueText;
+  }
+
+  h1 {
+    color: $VeryDarkBlueText;
+  }
+}
+
+.darkmode {
+
   background-color: $VeryDarkBlueTopBG;
+
+}
+
+body {
   padding-left: 10%;
   padding-right: 10%;
   color: $WhiteText;
@@ -27,13 +44,18 @@ nav {
   align-items: center;
 }
 
+.card:hover {
+  background-color: hsla(230, 25%, 25%, 0.973) !important;
+  cursor: pointer;
+}
+
 // main cards
 .mainCards {
   @include cardsGrid(center);
 
   //   individua; card
   .card {
-    @include cardStyle();
+    @include cardStyles($LightGrayishBlueCardBG);
   }
 
   .pWide span:first-child {
@@ -134,7 +156,7 @@ nav {
   }
 
   .card {
-    @include cardStyle();
+    @include cardStyles($LightGrayishBlueCardBG);
 
     .flex {
       display: flex;

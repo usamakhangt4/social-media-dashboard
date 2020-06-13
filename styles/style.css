@@ -10,8 +10,23 @@
   color: red;
 }
 
-body {
+.lightMode {
+  background-color: white;
+}
+
+.lightMode * {
+  color: #63687e;
+}
+
+.lightMode h1 {
+  color: #1e202a;
+}
+
+.darkmode {
   background-color: #1f212e;
+}
+
+body {
   padding-left: 10%;
   padding-right: 10%;
   color: white;
@@ -27,6 +42,11 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.card:hover {
+  background-color: rgba(48, 53, 80, 0.973) !important;
+  cursor: pointer;
 }
 
 .mainCards {
@@ -45,7 +65,7 @@ nav {
 }
 
 .mainCards .card {
-  background-color: #252a41;
+  background-color: #f0f2fa;
   border-radius: 6px;
 }
 
@@ -234,7 +254,7 @@ nav {
 }
 
 .todayCards .card {
-  background-color: #252a41;
+  background-color: #f0f2fa;
   border-radius: 6px;
 }
 

@@ -11,8 +11,8 @@
 
 
 
-@mixin cardStyle {
-  background-color: $DarkDesaturatedBlueCardBG;
+@mixin cardStyles($color) {
+  background-color: $color;
   border-radius: 6px;
 }
 
