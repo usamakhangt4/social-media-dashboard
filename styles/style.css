@@ -6,12 +6,14 @@
           box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  color: red;
+.lightMode {
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-color: white;
 }
 
-.lightMode {
-  background-color: white;
+.lightMode .attribution a {
+  text-decoration: none;
 }
 
 .lightMode * {
@@ -32,18 +34,80 @@
   background-color: rgba(211, 214, 222, 0.568) !important;
 }
 
-.darkmode {
+.lightMode .pWide span:first-child {
+  color: #1e202a;
+}
+
+.lightMode .pWide span:last-child {
+  color: #63687e;
+}
+
+.lightMode h3 {
+  color: #1e202a;
+}
+
+.lightMode .flex p {
+  color: #63687e;
+}
+
+.lightMode .flex2 p:first-child {
+  color: #1e202a;
+}
+
+.darkMode {
+  -webkit-transition: 1s;
+  transition: 1s;
   background-color: #1f212e;
 }
 
-.darkmode .card {
+.darkMode .attribution a {
+  text-decoration: none;
+  color: white;
+}
+
+.darkMode .title p {
+  color: #8b97c6;
+}
+
+.darkMode .card {
   background-color: #252a41;
   border-radius: 6px;
 }
 
-.darkmode .card:hover {
+.darkMode .card:hover {
   cursor: pointer;
   background-color: rgba(48, 53, 80, 0.973) !important;
+}
+
+.darkMode .pWide span:first-child {
+  color: white;
+}
+
+.darkMode .pWide span:last-child {
+  color: #8b97c6;
+}
+
+.darkMode h3 {
+  color: white;
+}
+
+.darkMode .flex p {
+  color: #8b97c6;
+}
+
+.darkMode .flex2 p:first-child {
+  color: white;
+}
+
+/* Disable scrollbar Firefox */
+html {
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* Disable scrollbar Chrome/Safari/Webkit */
 }
 
 body {
@@ -92,6 +156,7 @@ nav {
 }
 
 .mainCards .decreasedFollowers {
+  font-weight: 700;
   color: #dc414c;
   font-size: 12px;
   display: -ms-grid;
@@ -108,6 +173,7 @@ nav {
 }
 
 .mainCards .increasedFollowers {
+  font-weight: 700;
   color: #1db489;
   font-size: 12px;
   display: -ms-grid;
@@ -285,7 +351,6 @@ nav {
 .todayCards .card .flex p {
   font-weight: bold;
   font-size: 14px;
-  color: #8b97c6;
 }
 
 .todayCards .card .flex .fa-instagram {
@@ -315,10 +380,10 @@ nav {
 
 .todayCards .card .flex2 p:first-child {
   font-size: 2em;
-  color: white;
 }
 
 .todayCards .card .flex2 .decreasedFollowers {
+  font-weight: 700;
   color: #dc414c;
   font-size: 12px;
   display: -ms-grid;
@@ -335,6 +400,7 @@ nav {
 }
 
 .todayCards .card .flex2 .increasedFollowers {
+  font-weight: 700;
   color: #1db489;
   font-size: 12px;
   display: -ms-grid;
@@ -361,6 +427,96 @@ nav {
   .todayCards {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  display: inline-block;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch input:checked + .slider {
+  background-image: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+}
+
+.switch input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196f3;
+          box-shadow: 0 0 1px #2196f3;
+}
+
+.switch input:checked + .slider::before {
+  -webkit-transform: translate(26px);
+          transform: translate(26px);
+}
+
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #aeb3cb;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.switch .slider::before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #252a41;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.switch .round {
+  border-radius: 34px;
+}
+
+.switch .round::before {
+  border-radius: 50%;
+}
+
+.attribution {
+  margin-top: 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.attribution a {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .attribution {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

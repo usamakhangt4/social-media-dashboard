@@ -6,10 +6,7 @@
   align-items: center;
   text-align: $textAlign;
   grid-gap: 30px;
-
 }
-
-
 
 @mixin cardStyles($color) {
   background-color: $color;
@@ -28,6 +25,7 @@
 }
 
 @mixin followers($color) {
+  font-weight: 700;
   color: $color;
   font-size: 12px;
   display: grid;

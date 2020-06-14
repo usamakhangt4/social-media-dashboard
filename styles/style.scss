@@ -7,13 +7,14 @@
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  // display: none;
-  color: red;
-}
-
 .lightMode {
+  transition: 1s;
   background-color: $WhiteBG;
+  .attribution {
+    a {
+      text-decoration: none;
+    }
+  }
 
   * {
     color: $DarkGrayishBlueText;
@@ -31,11 +32,42 @@
       background-color: hsla(224, 14%, 85%, 0.568) !important;
     }
   }
+  .pWide span:first-child {
+    color: $VeryDarkBlueText;
+  }
+
+  .pWide span:last-child {
+    color: $DarkGrayishBlueText;
+  }
+  h3 {
+    color: $VeryDarkBlueText;
+  }
+  .flex {
+    p {
+      color: $DarkGrayishBlueText;
+    }
+  }
+  .flex2 {
+    p:first-child {
+      color: $VeryDarkBlueText;
+    }
+  }
 }
 
-.darkmode {
+.darkMode {
+  .attribution {
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  transition: 1s;
   background-color: $VeryDarkBlueTopBG;
-
+  .title {
+    p {
+      color: $DesaturatedBlueText;
+    }
+  }
   //   individua; card
   .card {
     @include cardStyles($DarkDesaturatedBlueCardBG);
@@ -45,7 +77,41 @@
       background-color: hsla(230, 25%, 25%, 0.973) !important;
     }
   }
+  .pWide span:first-child {
+    color: $WhiteText;
+  }
+
+  .pWide span:last-child {
+    color: $DesaturatedBlueText;
+  }
+  h3 {
+    color: $WhiteText;
+  }
+  .flex {
+    p {
+      color: $DesaturatedBlueText;
+    }
+  }
+  .flex2 {
+    p:first-child {
+      color: $WhiteText;
+    }
+  }
 }
+
+// hide scroll bar
+
+// @-moz-document url-prefix() {
+/* Disable scrollbar Firefox */
+html {
+  scrollbar-width: none;
+}
+// }
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
+}
+// hide scroll bar
 
 body {
   padding-left: 10%;
@@ -173,7 +239,6 @@ nav {
       p {
         font-weight: bold;
         font-size: 14px;
-        color: $DesaturatedBlueText;
       }
 
       .fa-instagram {
@@ -200,7 +265,6 @@ nav {
 
       p:first-child {
         font-size: 2em;
-        color: $WhiteText;
       }
 
       .decreasedFollowers {
@@ -223,5 +287,71 @@ nav {
 @media (max-width: 550px) {
   .todayCards {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  display: inline-block;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    &:checked + .slider {
+      background-image: $toggleDark;
+    }
+    &:focus + .slider {
+      box-shadow: 0 0 1px #2196f3;
+    }
+    &:checked + .slider::before {
+      transform: translate(26px);
+    }
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: $toggleLight;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 22px;
+      width: 22px;
+      left: 4px;
+      bottom: 4px;
+      background-color: $DarkDesaturatedBlueCardBG;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+  }
+  .round {
+    border-radius: 34px;
+    &::before {
+      border-radius: 50%;
+    }
+  }
+}
+
+.attribution {
+  margin-top: 0.5%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  a {
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+}
+@media (max-width: 600px) {
+  .attribution {
+    flex-direction: column;
+    align-items: center;
   }
 }
