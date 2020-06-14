@@ -22,8 +22,28 @@
   color: #1e202a;
 }
 
+.lightMode .card {
+  background-color: #f0f2fa;
+  border-radius: 6px;
+}
+
+.lightMode .card:hover {
+  cursor: pointer;
+  background-color: rgba(211, 214, 222, 0.568) !important;
+}
+
 .darkmode {
   background-color: #1f212e;
+}
+
+.darkmode .card {
+  background-color: #252a41;
+  border-radius: 6px;
+}
+
+.darkmode .card:hover {
+  cursor: pointer;
+  background-color: rgba(48, 53, 80, 0.973) !important;
 }
 
 body {
@@ -44,11 +64,6 @@ nav {
           align-items: center;
 }
 
-.card:hover {
-  background-color: rgba(48, 53, 80, 0.973) !important;
-  cursor: pointer;
-}
-
 .mainCards {
   display: -ms-grid;
   display: grid;
@@ -62,11 +77,6 @@ nav {
           align-items: center;
   text-align: center;
   grid-gap: 30px;
-}
-
-.mainCards .card {
-  background-color: #f0f2fa;
-  border-radius: 6px;
 }
 
 .mainCards .pWide span:first-child {
@@ -251,11 +261,6 @@ nav {
 .todayCards .card {
   height: 130px;
   padding: auto;
-}
-
-.todayCards .card {
-  background-color: #f0f2fa;
-  border-radius: 6px;
 }
 
 .todayCards .card .flex {
